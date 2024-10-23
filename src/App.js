@@ -28,14 +28,15 @@ function App() {
     setSideBarVisible(prevState => !prevState);
   };
 
-  return (
-    <>
-      <OnBoardingScreen/>
+  return (<>
+    <TopBar/>
+    <SideBar visible="block"/>
 
-      
+    <ContentArea>
+      <DevicesListScreen/>
+    </ContentArea>
 
-    </>
-  );
+  </>);
 }
 
 export default App;
