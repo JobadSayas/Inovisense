@@ -1,0 +1,33 @@
+.edit-mode select,
+.edit-mode input,
+.edit-mode textarea,
+.edit-mode .tag-holder
+{@apply 
+    border 
+    border-gray-300
+    px-2
+    bg-white
+;}
+
+.read-mode select, 
+.read-mode input,
+.read-mode textarea
+{@apply 
+    bg-transparent
+    appearance-none
+    pointer-events-none
+;}
+
+.read-mode .edit-only,
+.edit-mode .read-only,
+.read-mode .select-wrapper i
+{@apply 
+    hidden
+;}
+
+@media screen and (min-width: 1024px){
+    .mobile-only label{
+        display: none;
+    }
+}
+
