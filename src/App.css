@@ -25,6 +25,29 @@
     hidden
 ;}
 
+
+.nav-item
+{@apply 
+    flex items-center justify-between pl-5 pr-3 h-14 rounded-lg hover:bg-gray-100
+;}
+
+    .nav-item i
+    {@apply 
+        mr-4 text-xl text-blue-500
+    ;}
+
+.nav-item.selected
+{@apply 
+    bg-blue-500 text-white
+;}
+
+    .nav-item.selected i
+    {@apply 
+        text-white
+    ;}
+
+
+
 @media screen and (min-width: 1024px){
     .mobile-only label{
         display: none;

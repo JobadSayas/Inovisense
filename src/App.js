@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import { Routes, Route } from 'react-router-dom'; // Import Routes and Route
 
 import TopBar from './components/common/TopBar'
 import SideBar from './components/common/SideBar';
@@ -29,12 +30,26 @@ function App() {
   };
 
   return (<>
-    <TopBar/>
-    <SideBar visible="block"/>
+    <TopBar onToggleSideBar={toggleSideBar} />
+      <SideBar visible={sideBarVisible} />
+      <ContentArea>
+        <Routes>
+          <Route path="/" element={<DashboardScreen />} /> {/* Default Dashboard */}
+          <Route path="/devices" element={<DevicesListScreen />} />
+          <Route path="/profile" element={<UserProfileScreen />} />
+          <Route path="/account-settings" element={<AccountSettingsScreen />} />
+          <Route path="/gateways" element={<GatewaysListScreen />} />
+          <Route path="/notifications" element={<NotificationsListScreen />} />
+          <Route path="/users" element={<UsersListScreen />} />
+        </Routes>
 
-    <ContentArea>
-      <DevicesListScreen/>
-    </ContentArea>
+        {/* <SwitchAccount/> */}
+        
+        {/* <DeviceDetailsScreen /> */}
+        {/* <NotificationDetails/> */}
+        {/* <UserDetailsScreen/> */}
+      </ContentArea>
+    {/* <OnBoardingScreen/> */}
 
   </>);
 }
