@@ -1,9 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import CardBase from '../../common/CardBase';
-import FlexGap from '../../common/FlexGap';
 
 const DeviceCard = ({title, status, children, image, battery, signal, lastUpdated}) =>  {
+    
+    const navigate = useNavigate();
+
+    const handleRowClick = () => {
+        navigate(`/device-details`);
+    };
 
     return (<>
 
@@ -11,6 +17,8 @@ const DeviceCard = ({title, status, children, image, battery, signal, lastUpdate
             
             title={title}
             status = {status}
+            onClick={() => handleRowClick()}
+            className="cursor-pointer"
             headerSlot={<>
             
                 {/* Battery and signal */}

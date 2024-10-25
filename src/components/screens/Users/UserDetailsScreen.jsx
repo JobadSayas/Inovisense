@@ -1,4 +1,5 @@
 import { React, useState } from 'react'
+import { Link } from 'react-router-dom';
 
 import { Switch } from '@headlessui/react'
 
@@ -9,8 +10,7 @@ import Divider from '../../common/Divider';
 
 const UserProfileScreen = ({  }) => {
 
-  const [switchOn, setSwitchOn] = useState(true)
-  
+  const [switchOn, setSwitchOn] = useState(true)  
 
   return (
   <div className='read-mode'>
@@ -19,10 +19,10 @@ const UserProfileScreen = ({  }) => {
     <div className="flex justify-between items-start mb-4 relative max-sm:mb-6">
               
       <div className='flex gap-3 justify-center items-center max-sm:flex-col max-sm:items-start'>
-          <button className="text-sm flex items-center bg-white hover:bg-gray-50 border border-gray-300 h-9 px-3 rounded-md whitespace-nowrap">
-          <i className="fa-solid fa-chevron-left mr-2"></i>
-          <span>Back</span>
-          </button>
+          <Link to="/users-list" className="text-sm flex items-center bg-white hover:bg-gray-50 border border-gray-300 h-9 px-3 rounded-md whitespace-nowrap ">
+            <i className="fa-solid fa-chevron-left mr-2"></i>
+            <span>Back</span>
+          </Link>
 
           <header className="text-2xl font-bold">Add user</header> 
       </div>

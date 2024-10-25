@@ -1,8 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import CardBase from '../../common/CardBase';
 
 const DashboardCard = ({title, status, children, image, battery, signal, lastUpdated}) =>  {
+
+    const navigate = useNavigate();
+
+    const handleRowClick = () => {
+        navigate(`/device-details`);
+    };
 
     return (<>
 
@@ -10,6 +17,8 @@ const DashboardCard = ({title, status, children, image, battery, signal, lastUpd
             
             title={title}
             status = {status}
+            className="cursor-pointer"
+            onClick={() => handleRowClick()}
             headerSlot={<>
             
                 {/* Battery and signal */}

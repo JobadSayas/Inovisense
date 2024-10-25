@@ -31,16 +31,20 @@ function App() {
 
   return (<>
     <TopBar onToggleSideBar={toggleSideBar} />
-      <SideBar visible={sideBarVisible} />
+      <SideBar visible={sideBarVisible} onLinkClick={toggleSideBar}/>
       <ContentArea>
         <Routes>
           <Route path="/" element={<DashboardScreen />} /> {/* Default Dashboard */}
-          <Route path="/devices" element={<DevicesListScreen />} />
+          <Route path="/devices-list" element={<DevicesListScreen />} />
+          <Route path="/device-details" element={<DeviceDetailsScreen />} />
           <Route path="/profile" element={<UserProfileScreen />} />
           <Route path="/account-settings" element={<AccountSettingsScreen />} />
-          <Route path="/gateways" element={<GatewaysListScreen />} />
-          <Route path="/notifications" element={<NotificationsListScreen />} />
-          <Route path="/users" element={<UsersListScreen />} />
+          <Route path="/gateways-list" element={<GatewaysListScreen />} />
+          <Route path="/notifications-list" element={<NotificationsListScreen />} />
+          <Route path="/Notification-details" element={<NotificationDetails />} />
+          <Route path="/users-list" element={<UsersListScreen />} />
+          <Route path="/user-details" element={<UserDetailsScreen />} />
+
         </Routes>
 
         {/* <SwitchAccount/> */}

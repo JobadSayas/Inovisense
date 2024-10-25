@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import Divider from '../../common/Divider';
 import FiltersHolder from '../../common/FiltersHolder';
@@ -6,6 +7,12 @@ import Filter from '../../common/Filter';
 import DownloadButton from '../../common/DownloadButton';
 
 const NotificationsListScreen = () =>  {
+
+    const navigate = useNavigate();
+
+    const handleRowClick = () => {
+        navigate(`/notification-details`);
+    };
 
     // Toggle views
     const [toggleView, setToggleView] = useState('cards');
@@ -71,7 +78,7 @@ const NotificationsListScreen = () =>  {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="h-11 border-b border-gray-300 hover:bg-gray-50">
+                    <tr class="h-11 border-b border-gray-300 hover:bg-gray-50 cursor-pointer" onClick={handleRowClick}>
                         <td class="py-2 px-4">
                             0933b37b7cd8
                         </td>
@@ -92,7 +99,7 @@ const NotificationsListScreen = () =>  {
                         </td>
                     </tr>
 
-                    <tr class="h-11 border-b border-gray-300 hover:bg-gray-50">
+                    <tr class="h-11 border-b border-gray-300 hover:bg-gray-50 cursor-pointer" onClick={handleRowClick}>
                         <td class="py-2 px-4">
                             0933b37b7cd8
                         </td>
@@ -113,7 +120,7 @@ const NotificationsListScreen = () =>  {
                         </td>
                     </tr>
 
-                    <tr class="h-11 border-b border-gray-300 hover:bg-gray-50">
+                    <tr class="h-11 border-b border-gray-300 hover:bg-gray-50 cursor-pointer" onClick={handleRowClick}>
                         <td class="py-2 px-4">
                             0933b37b7cd8
                         </td>
@@ -134,7 +141,7 @@ const NotificationsListScreen = () =>  {
                         </td>
                     </tr>
 
-                    <tr class="h-11 border-b border-gray-300 hover:bg-gray-50">
+                    <tr class="h-11 border-b border-gray-300 hover:bg-gray-50 cursor-pointer" onClick={handleRowClick}>
                         <td class="py-2 px-4">
                             0933b37b7cd8
                         </td>
@@ -155,7 +162,7 @@ const NotificationsListScreen = () =>  {
                         </td>
                     </tr>
 
-                    <tr class="h-11 border-b border-gray-300 hover:bg-gray-50">
+                    <tr class="h-11 border-b border-gray-300 hover:bg-gray-50 cursor-pointer" onClick={handleRowClick}>
                         <td class="py-2 px-4">
                             0933b37b7cd8
                         </td>

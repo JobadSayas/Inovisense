@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import Divider from '../../common/Divider';
 import Filter from '../../common/Filter';
@@ -6,16 +7,11 @@ import FiltersHolder from '../../common/FiltersHolder';
 
 const UsersListScreen = () =>  {
 
-    // Toggle views
-    const [toggleView, setToggleView] = useState('cards');
+    const navigate = useNavigate();
 
-    const handleCardView = () => {
-        setToggleView('cards');
-    }
-    
-    const handleTableView = () => {
-        setToggleView('table');
-    }
+    const handleRowClick = () => {
+        navigate(`/user-details`);
+    };
 
     return (<>
 
@@ -71,7 +67,7 @@ const UsersListScreen = () =>  {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="h-11 border-b border-gray-300 hover:bg-gray-50">
+                    <tr class="h-11 border-b border-gray-300 hover:bg-gray-50 cursor-pointer" onClick={handleRowClick}>
                         <td class="py-2 px-4">
                             John Roberst
                         </td>
@@ -99,7 +95,7 @@ const UsersListScreen = () =>  {
                         </td>
                     </tr>
 
-                    <tr class="h-11 border-b border-gray-300 hover:bg-gray-50">
+                    <tr class="h-11 border-b border-gray-300 hover:bg-gray-50 cursor-pointer" onClick={handleRowClick}>
                         <td class="py-2 px-4">
                             Robert Lewis
                         </td>
@@ -127,7 +123,7 @@ const UsersListScreen = () =>  {
                         </td>
                     </tr>
 
-                    <tr class="h-11 border-b border-gray-300 hover:bg-gray-50">
+                    <tr class="h-11 border-b border-gray-300 hover:bg-gray-50 cursor-pointer" onClick={handleRowClick}>
                         <td class="py-2 px-4">
                             John Roberst
                         </td>
@@ -155,7 +151,7 @@ const UsersListScreen = () =>  {
                         </td>
                     </tr>
 
-                    <tr class="h-11 border-b border-gray-300 hover:bg-gray-50">
+                    <tr class="h-11 border-b border-gray-300 hover:bg-gray-50 cursor-pointer" onClick={handleRowClick}>
                         <td class="py-2 px-4">
                             John Roberst
                         </td>
@@ -183,7 +179,7 @@ const UsersListScreen = () =>  {
                         </td>
                     </tr>
 
-                    <tr class="h-11 border-b border-gray-300 hover:bg-gray-50">
+                    <tr class="h-11 border-b border-gray-300 hover:bg-gray-50 cursor-pointer" onClick={handleRowClick}>
                         <td class="py-2 px-4">
                             John Roberst
                         </td>

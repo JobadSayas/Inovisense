@@ -1,6 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const TableView = () =>  {
+
+    const navigate = useNavigate();
+
+    const handleRowClick = () => {
+        navigate(`/device-details`);
+    };
 
 
     return (
@@ -18,7 +25,7 @@ const TableView = () =>  {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="h-11 border-b border-gray-300">
+                    <tr class="h-11 border-b border-gray-300 cursor-pointer" onClick={() => handleRowClick()}>
                         <td class="py-2 px-4">Device</td>
                         <td class="py-2 px-4"><i class="fa-solid fa-circle-check text-green-500 mr-1"></i> Good</td>
                         <td class="py-2 px-4">
@@ -32,7 +39,7 @@ const TableView = () =>  {
                             </button>
                         </td>
                     </tr>
-                    <tr class="h-11 border-b border-gray-300">
+                    <tr class="h-11 border-b border-gray-300 cursor-pointer" onClick={() => handleRowClick()}>
                         <td class="py-2 px-4">Device</td>
                         <td class="py-2 px-4"><i class="fa-solid fa-circle-exclamation text-yellow-500 mr-1"></i> Low Battery/Signal</td>
                         <td class="py-2 px-4">
@@ -46,7 +53,7 @@ const TableView = () =>  {
                             </button>
                         </td>
                     </tr>
-                    <tr class="h-11 border-b border-gray-300">
+                    <tr class="h-11 border-b border-gray-300 cursor-pointer" onClick={() => handleRowClick()}>
                         <td class="py-2 px-4">Device</td>
                         <td class="py-2 px-4"><i class="fa-solid fa-circle-check text-green-500 mr-1"></i> Good</td>
                         <td class="py-2 px-4">
@@ -60,7 +67,7 @@ const TableView = () =>  {
                             </button>
                         </td>
                     </tr>
-                    <tr class="h-11 border-b border-gray-300">
+                    <tr class="h-11 border-b border-gray-300 cursor-pointer" onClick={() => handleRowClick()}>
                         <td class="py-2 px-4">Device</td>
                         <td class="py-2 px-4"><i class="fa-solid fa-circle-check text-green-500 mr-1"></i> Good</td>
                         <td class="py-2 px-4">
@@ -74,7 +81,7 @@ const TableView = () =>  {
                             </button>
                         </td>
                     </tr>
-                    <tr class="h-11 border-b border-gray-300">
+                    <tr class="h-11 border-b border-gray-300 cursor-pointer" onClick={() => handleRowClick()}>
                         <td class="py-2 px-4">Device</td>
                         <td class="py-2 px-4"><i class="fa-solid fa-bell text-red-500 mr-1"></i> Alert</td>
                         <td class="py-2 px-4">
@@ -88,7 +95,7 @@ const TableView = () =>  {
                             </button>
                         </td>
                     </tr>
-                    <tr class="h-11 border-b border-gray-300">
+                    <tr class="h-11 border-b border-gray-300 cursor-pointer" onClick={() => handleRowClick()}>
                         <td class="py-2 px-4">Device</td>
                         <td class="py-2 px-4"><i class="fa-solid fa-circle-check text-green-500 mr-1"></i> Good</td>
                         <td class="py-2 px-4">
@@ -102,7 +109,7 @@ const TableView = () =>  {
                             </button>
                         </td>
                     </tr>
-                    <tr class="h-11 border-b border-gray-300">
+                    <tr class="h-11 border-b border-gray-300 cursor-pointer" onClick={() => handleRowClick()}>
                         <td class="py-2 px-4">Device</td>
                         <td class="py-2 px-4"><i class="fa-solid fa-circle-check text-green-500 mr-1"></i> Good</td>
                         <td class="py-2 px-4">
@@ -116,7 +123,7 @@ const TableView = () =>  {
                             </button>
                         </td>
                     </tr>
-                    <tr class="h-11 border-b border-gray-300">
+                    <tr class="h-11 border-b border-gray-300 cursor-pointer" onClick={() => handleRowClick()}>
                         <td class="py-2 px-4">Device</td>
                         <td class="py-2 px-4"><i class="fa-solid fa-circle-check text-green-500 mr-1"></i> Good</td>
                         <td class="py-2 px-4">
@@ -130,7 +137,7 @@ const TableView = () =>  {
                             </button>
                         </td>
                     </tr>
-                    <tr class="h-11 border-b border-gray-300">
+                    <tr class="h-11 border-b border-gray-300 cursor-pointer" onClick={() => handleRowClick()}>
                         <td class="py-2 px-4">Device</td>
                         <td class="py-2 px-4"><i class="fa-solid fa-circle-check text-green-500 mr-1"></i> Good</td>
                         <td class="py-2 px-4">
@@ -144,7 +151,7 @@ const TableView = () =>  {
                             </button>
                         </td>
                     </tr>
-                    <tr class="h-11 border-b border-gray-300">
+                    <tr class="h-11 border-b border-gray-300 cursor-pointer" onClick={() => handleRowClick()}>
                         <td class="py-2 px-4">Device</td>
                         <td class="py-2 px-4"><i class="fa-solid fa-circle-check text-green-500 mr-1"></i> Good</td>
                         <td class="py-2 px-4">

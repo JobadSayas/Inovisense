@@ -12,6 +12,11 @@ const TopBar = ({ onToggleSideBar }) => {
     setProfileDisplayVisible(prevState => !prevState);
   };
 
+  // Toggle notification display
+  const handleDisplayNotification = () => {
+    setProfileDisplayVisible(prevState => !prevState);
+  };
+
   return (
     <div className="fixed top-0 left-0 right-0 bg-white h-16 border-b border-gray-300 flex items-center justify-between px-4 z-50">
 

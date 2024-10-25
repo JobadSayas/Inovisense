@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CardBase = ({ title, headerSlot, body, footer, status, className }) => {
+const CardBase = ({ title, headerSlot, body, footer, status, className, onClick }) => {
     // Determine the status icon and border color based on the status prop
     const statusIcon = () => {
         switch (status) {
@@ -29,7 +29,7 @@ const CardBase = ({ title, headerSlot, body, footer, status, className }) => {
     };
 
     return (
-        <div className={`bg-white border rounded-lg shadow-lg overflow-hidden border-2 ${borderColor()} ${className}`}>
+        <div className={`bg-white border rounded-lg shadow-lg overflow-hidden border-2 ${borderColor()} ${className}`} onClick={onClick}>
             {/* Header */}
             <div className="border-b border-gray-300 h-12 flex items-center justify-between px-4">
                 <span className="flex flex-row items-center gap-2">

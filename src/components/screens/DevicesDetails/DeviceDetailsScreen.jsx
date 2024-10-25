@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react';
 
@@ -10,11 +11,10 @@ import TriggeresView from './TriggeresView'
 
 const DeviceDetails = () =>  {
 
-
     return (<>
 
       {/* Top buttons holder */}
-      <div className='flex justify-between items-center w-full'>
+      <Link to="/devices-list" className='flex justify-between items-center w-full'>
           <button className="text-sm flex items-center bg-white hover:bg-gray-50 border border-gray-300 h-9 px-3 rounded-md whitespace-nowrap">
               <i className="fa-solid fa-chevron-left mr-2"></i>
               <span>Back</span>
@@ -23,7 +23,7 @@ const DeviceDetails = () =>  {
           <button className="flex items-center p-3 py-2 text-sm focus:outline-none rounded-md border border-gray-300 hover:bg-blue-600 whitespace-nowrap bg-blue-500 text-white">
               <i className="fa-solid fa-plus mr-2"></i> Add to dashboard
           </button>
-      </div>
+      </Link>
 
 
       {/* Device info holder */}

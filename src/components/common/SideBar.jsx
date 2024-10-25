@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom'; // Importar useLocation
 
-const SideBar = ({ visible }) => {
+const SideBar = ({ visible, onLinkClick }) => {
   const location = useLocation(); // Para obtener la ruta actual
 
   // Function to add the "selected" class if the path matches
@@ -17,7 +17,7 @@ const SideBar = ({ visible }) => {
     >
       <div className="flex flex-col space-y-2 p-2">
 
-        <Link to="/" className={getNavItemClass('/')}>
+        <Link to="/" className={getNavItemClass('/')} onClick={onLinkClick}>
           <span className="flex items-center">
             <i className="fa-solid fa-square-poll-vertical"></i>
             <span>Dashboard</span>
@@ -25,7 +25,7 @@ const SideBar = ({ visible }) => {
           <i className="fa-solid fa-chevron-right ml-auto"></i>
         </Link>
 
-        <Link to="/users" className={getNavItemClass('/users')}>
+        <Link to="/users-list" className={getNavItemClass('/users-list')} onClick={onLinkClick}>
           <span className="flex items-center">
             <i className="fa-solid fa-users mr-4"></i>
             <span>Users</span>
@@ -33,7 +33,7 @@ const SideBar = ({ visible }) => {
           <i className="fa-solid fa-chevron-right ml-auto"></i>
         </Link>
         
-        {/* <Link to="/" className={getNavItemClass('/')}>
+        {/* <Link to="/" className={getNavItemClass('/')} onClick={onLinkClick}>
           <span className="flex items-center">
             <i className="fa-solid fa-file-code mr-4"></i>
             <span>Applications</span>
@@ -41,7 +41,7 @@ const SideBar = ({ visible }) => {
           <i className="fa-solid fa-chevron-right ml-auto"></i>
         </Link> */}
 
-        <Link to="/devices" className={getNavItemClass('/devices')}>
+        <Link to="/devices-list" className={getNavItemClass('/devices-list')} onClick={onLinkClick}>
           <span className="flex items-center">
             <i className="fa-solid fa-hard-drive mr-4"></i>
             <span>Devices</span>
@@ -49,7 +49,7 @@ const SideBar = ({ visible }) => {
           <i className="fa-solid fa-chevron-right ml-auto"></i>
         </Link>
 
-        <Link to="/gateways" className={getNavItemClass('/gateways')}>
+        <Link to="/gateways-list" className={getNavItemClass('/gateways-list')} onClick={onLinkClick}>
           <span className="flex items-center">
             <i className="fa-solid fa-tower-broadcast mr-4"></i>
             <span>Gateways</span>
@@ -57,7 +57,7 @@ const SideBar = ({ visible }) => {
           <i className="fa-solid fa-chevron-right ml-auto"></i>
         </Link>
 
-        <Link to="/notifications" className={getNavItemClass('/notifications')}>
+        <Link to="/notifications-list" className={getNavItemClass('/notifications-list')} onClick={onLinkClick}>
           <span className="flex items-center">
             <i className="fa-solid fa-bell mr-4"></i>
             <span>Notifications</span>

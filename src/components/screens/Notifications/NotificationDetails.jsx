@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Detail from '../../common/Detail';
 import Divider from '../../common/Divider';
@@ -15,10 +16,10 @@ const NotificationDetails = ({ }) => {
         ">
             
             <div className='flex gap-3 justify-center items-center max-sm:flex-col max-sm:items-start'>
-                <button className="text-sm flex items-center bg-white hover:bg-gray-50 border border-gray-300 h-9 px-3 rounded-md whitespace-nowrap">
-                <i className="fa-solid fa-chevron-left mr-2"></i>
-                <span>Back</span>
-                </button>
+                <Link to="/notifications-list" className="text-sm flex items-center bg-white hover:bg-gray-50 border border-gray-300 h-9 px-3 rounded-md whitespace-nowrap ">
+                    <i className="fa-solid fa-chevron-left mr-2"></i>
+                    <span>Back</span>
+                </Link>
 
                 <header className="text-2xl font-bold">Notification details</header> 
             </div>
