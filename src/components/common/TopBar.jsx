@@ -5,16 +5,19 @@ import NotificationsPopOver from '../screens/Notifications/NotificationsPopOver'
 
 
 const TopBar = ({ onToggleSideBar }) => {
+  
+  // Toggle profile display
   const [profileDisplayVisible, setProfileDisplayVisible] = React.useState(false);
 
-  // Toggle profile display
   const handleDisplayProfile = () => {
     setProfileDisplayVisible(prevState => !prevState);
   };
-
+  
   // Toggle notification display
+  const [notificationDisplayVisible, setNotificationDisplayVisible] = React.useState(false);
+
   const handleDisplayNotification = () => {
-    setProfileDisplayVisible(prevState => !prevState);
+    setNotificationDisplayVisible(prevState => !prevState);
   };
 
   return (
@@ -36,24 +39,26 @@ const TopBar = ({ onToggleSideBar }) => {
       <div className="flex space-x-2 items-center">
 
         {/* Notifications */}
-        <button className="w-10 h-10 bg-blue-100 text-blue-500 rounded-full flex items-center justify-center focus:outline-none hover:bg-blue-200">
+        <button 
+          onClick={handleDisplayNotification}
+          className="w-10 h-10 bg-blue-100 text-blue-500 rounded-full flex items-center justify-center focus:outline-none hover:bg-blue-200">
           <i className="fa-solid fa-bell"></i>
         </button>
 
-        <NotificationsPopOver className="hidden"/>
+        {notificationDisplayVisible && <NotificationsPopOver />}
 
         {/* Profile */}
         <button
           id="profile-btn"
-          className="flex items-center space-x-2 hover:bg-gray-100 rounded-lg py-1 px-3 ml-4 "
           onClick={handleDisplayProfile}
+          className="flex items-center space-x-2 hover:bg-gray-100 rounded-lg py-1 px-3 ml-4 "
         >
           <span className="max-lg:hidden">User Name</span>
           <img src="https://placehold.co/40x40" alt="Placeholder" className="w-10 h-10 border border-gray-300 rounded-full" />
           <i className="fa-solid fa-caret-down"></i>
         </button>
 
-        <ProfileDisplay visible={profileDisplayVisible} />
+        {profileDisplayVisible && <ProfileDisplay />}
 
       </div>
 

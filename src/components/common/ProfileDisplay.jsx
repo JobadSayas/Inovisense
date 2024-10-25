@@ -1,12 +1,10 @@
 import React from 'react';
 
-const ProfileDisplay = ({ visible }) => {
+const ProfileDisplay = () => {
 
   return (
 
-    <div id="profile-display" className={`absolute top-16 right-3 bg-white border border-t-0 border-gray-300 shadow-lg min-w-64 w-auto
-        ${!visible ? 'hidden' : ''}
-    `}>
+    <div id="profile-display" className={`absolute top-16 right-3 bg-white border border-t-0 border-gray-300 shadow-lg min-w-64 w-auto`}>
 
         <div className="flex space-x-2 items-center p-3 pb-2 border-gray-300">
             <img src="https://placehold.co/40x40" alt="Placeholder" className="w-10 h-10 border border-gray-300 rounded-full" />

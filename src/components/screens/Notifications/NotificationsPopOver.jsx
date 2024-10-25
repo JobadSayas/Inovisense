@@ -2,12 +2,12 @@ import React from 'react';
 
 import Divider from '../../common/Divider';
 
-const NotificationsPopOver = ({ className }) => {
+const NotificationsPopOver = () => {
 
   return (
     
     <div className={`bg-white border border-gray-300 p-3 rounded-bl-lg rounded-br-lg shadow-lg absolute top-[63px] right-0 text-sm overflow-auto 
-                    sm:max-h-[498px] max-sm:w-screen ${className}`} style={{ height: "calc(100vh - 63px)" }}>
+                    sm:max-h-[498px] max-sm:w-screen`} style={{ height: "calc(100vh - 63px)" }}>
 
         <div className='cursor-pointer border-b border-gray-300 flex gap-4 items-center pb-2' >
             <img src="https://placehold.co/80x80" className="w-20 h-20 rounded-md"/>
